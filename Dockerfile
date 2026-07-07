@@ -9,7 +9,9 @@ COPY package*.json ./
 
 # Copiar los datos y el archivo de pruebas necesarios para Jest
 COPY users.json ./
-COPY app.test.js ./
+# Copiar la carpeta completa de pruebas 'test' al contenedor
+COPY tests/ ./test/
+
 
 # Copiar el código principal de la aplicación
 COPY index.js .
